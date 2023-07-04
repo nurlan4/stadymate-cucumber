@@ -12,8 +12,10 @@ import java.util.List;
 
 public class StudymateLoginPage {
     public StudymateLoginPage() {
-        PageFactory.initElements(Driver.getDriver(), this);
+       PageFactory.initElements(Driver.getDriver(), this);
     }
+
+
     @FindBy(xpath = "//input[@name='email']")
     public WebElement usernameInput;
     @FindBy(xpath = "(//input)[2]")
@@ -33,7 +35,6 @@ public class StudymateLoginPage {
     public WebElement emailIsRequired;
 
     public void studyMateLogIn(){
-
         usernameInput.sendKeys(Config.getValue("studymateUsername"));
         passwordInput.sendKeys(PasswordEncryptorDecryptor.decryptPassword(Config.getValue("studymatePassword")));
         loginBtn.click();
