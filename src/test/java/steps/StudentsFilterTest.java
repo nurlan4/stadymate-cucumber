@@ -24,7 +24,7 @@ public class StudentsFilterTest {
 
 
 
-    @Given("user go to codewise.studymate.us")
+    @Given("user go to codewise.studymate.us1")
     public void user_go_to_codewise_studymate_us() {
         driver.get(Config.getValue("studymateUrl"));
         Assert.assertEquals("StudyMate",driver.getTitle());
@@ -32,7 +32,7 @@ public class StudentsFilterTest {
 
 
     }
-    @Then("user enters valid “email” and valid “password”")
+    @Then("user enters valid “email” and valid “password”1")
     public void user_enters_valid_email_and_valid_password() {
         studymateLoginPage.studyMateLogIn();
         logger.info("User entered email: " + Config.getValue("studymateUsername"));
@@ -40,7 +40,7 @@ public class StudentsFilterTest {
 
 
     }
-    @Given("user on Home page")
+    @Given("user on Home page1")
     public void user_on_home_page() {
         String expectedUrl = "https://codewise.studymate.us/admin/analytics";
         ApplicationFlow.pause(3000);

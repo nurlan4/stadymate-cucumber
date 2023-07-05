@@ -1,4 +1,4 @@
-@announcementTest
+@announcementTest @regression
 Feature: create announcements and choose group
 
   Background:

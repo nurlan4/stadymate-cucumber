@@ -27,7 +27,6 @@ public class TrashTestSteps {
 
     }
 
-
     @Given("user provides valid a username")
     public void user_provides_valid_a_username() {
         studymateLoginPage.usernameInput.sendKeys(Config.getValue("studymateUsername"));
@@ -90,11 +89,9 @@ public class TrashTestSteps {
         for (WebElement i : trashPage.listOfTrash) {
             int num = Integer.parseInt(i.getText().substring(8));
             if (num < dateMinusSevenDays.getDayOfMonth()) {
-                System.out.println("TEST FAILED");
-                System.out.println();
+
             } else {
                 System.out.println("TEST PASSED");
-
             }
         }
         logger.info("user verifies if the elements had been deleted ");
