@@ -1,14 +1,14 @@
-@StudentFilter
+@StudentFilter @regression
 Feature:  should be able to filter students list by groups or study format
 
   Background:
-    Given user go to codewise.studymate.us
-    Then user enters valid “email” and valid “password”
+    Given user go to codewise.studymate.us1
+    Then user enters valid “email” and valid “password”1
 
 
 
   Scenario:
-    Given user on Home page
+    Given user on Home page1
     Then user clicks on Students
     And user located on Students page
     Given user is on students tab

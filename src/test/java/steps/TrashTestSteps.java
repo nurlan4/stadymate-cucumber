@@ -89,8 +89,7 @@ public class TrashTestSteps {
         for (WebElement i : trashPage.listOfTrash) {
             int num = Integer.parseInt(i.getText().substring(8));
             if (num < dateMinusSevenDays.getDayOfMonth()) {
-                System.out.println("TEST FAILED");
-                System.out.println();
+
             } else {
                 System.out.println("TEST PASSED");
             }
