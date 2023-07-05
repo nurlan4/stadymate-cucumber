@@ -27,7 +27,6 @@ public class TrashTestSteps {
 
     }
 
-
     @Given("user provides valid a username")
     public void user_provides_valid_a_username() {
         studymateLoginPage.usernameInput.sendKeys(Config.getValue("studymateUsername"));
@@ -94,7 +93,6 @@ public class TrashTestSteps {
                 System.out.println();
             } else {
                 System.out.println("TEST PASSED");
-
             }
         }
         logger.info("user verifies if the elements had been deleted ");

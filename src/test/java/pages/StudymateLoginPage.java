@@ -35,6 +35,7 @@ public class StudymateLoginPage {
     public WebElement emailIsRequired;
 
     public void studyMateLogIn(){
+
         usernameInput.sendKeys(Config.getValue("studymateUsername"));
         passwordInput.sendKeys(Config.getValue("studymatePassword"));
         loginBtn.click();

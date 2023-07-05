@@ -1,5 +1,5 @@
 Feature: verify the element in the trash page are being deleted after 7 days of delete date
-  @trashDelete
+  @trashDelete @regression
   Scenario: user verifies the elements are deleted after 7 days of the delete date
     Given user is in studyMate login page
     Given user provides valid a username

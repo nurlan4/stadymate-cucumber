@@ -68,11 +68,6 @@ public class AnnouncementsTest {
 
     }
 
-
-
-
-
-
         @Then("user can see chosen group on page")
         public void user_can_see_chosen_group_on_page() {
 

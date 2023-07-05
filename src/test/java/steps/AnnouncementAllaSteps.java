@@ -26,8 +26,12 @@ public class AnnouncementAllaSteps {
         logger.info("User: " +  Config.getValue("email")+ " is on Login page");
     }
     @Then("user enters valid {string} and valid {string}")
-    public void user_enters_valid_and_valid(String string, String string2) {
-        studymateLoginPage.studyMateLogIn();
+    public void user_enters_valid_and_valid(String username, String password) {
+        username = Config.getValue("studymateUsername");
+        password = Config.getValue("studymatePassword");
+        studymateLoginPage.usernameInput.sendKeys(username);
+        studymateLoginPage.passwordInput.sendKeys(password);
+        studymateLoginPage.loginBtn.click();
         logger.info("User entered email: " + Config.getValue("studymateUsername"));
         logger.info("User entered password: " + Config.getValue("studymatePassword"));
 

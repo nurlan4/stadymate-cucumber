@@ -1,7 +1,7 @@
 Feature: Find the right Announcement
 
 
-  @test1
+  @test1  @regression
   Scenario: Make sure user can launch "Announcement" page
 
     Given user is on login page
@@ -9,7 +9,7 @@ Feature: Find the right Announcement
     Then user navigates to announcements tab
     And  use check current URL with expected
 
-    @test2
+    @test2  @regression
     Scenario:Make sure user can see announcement related chosen group
       Given user is on login page
       Then user provide valid credentials
@@ -17,7 +17,7 @@ Feature: Find the right Announcement
       And user choose the group name on search dropdown
       And user can see chosen group on page
 
-     @test3
+     @test3  @regression
      Scenario:Make sure user can see announcement related chosen group
        Given user is on login page
        Then user provide valid credentials
