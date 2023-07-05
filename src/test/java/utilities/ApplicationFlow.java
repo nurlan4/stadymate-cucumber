@@ -12,11 +12,13 @@ public class ApplicationFlow {
             System.out.println("Interruption happened");
         }
     }
+
     public  static void scroll(int y){
         Actions actions = new Actions(Driver.getDriver());
         actions.scrollByAmount(0, y).perform();
 
     }
+
     public static void switchToSecondWindow(){
         String currentID=Driver.getDriver().getWindowHandle();
         Set<String> windowHandles = Driver.getDriver().getWindowHandles();
@@ -25,6 +27,7 @@ public class ApplicationFlow {
                 Driver.getDriver().switchTo().window(windowHandle);
                 break;
             }
-        }}
+        }
+    }
 
 }

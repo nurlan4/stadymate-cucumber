@@ -1,16 +1,20 @@
 package pages;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Config;
 import utilities.Driver;
 import utilities.PasswordEncryptorDecryptor;
+
+
 import java.util.List;
+
 public class StudymateLoginPage {
     public StudymateLoginPage() {
-
-        PageFactory.initElements(Driver.getDriver(), this);
+       PageFactory.initElements(Driver.getDriver(), this);
     }
+
 
     @FindBy(xpath = "//input[@name='email']")
     public WebElement usernameInput;
@@ -30,17 +34,14 @@ public class StudymateLoginPage {
     @FindBy(xpath = "//p[.='Email is required!']")
     public WebElement emailIsRequired;
 
-    public void studyMateLogIn() {
-
+    public void studyMateLogIn(){
         usernameInput.sendKeys(Config.getValue("studymateUsername"));
-        passwordInput.sendKeys(PasswordEncryptorDecryptor.decryptPassword(Config.getValue("studymatePassword")));
+        passwordInput.sendKeys(Config.getValue("studymatePassword"));
         loginBtn.click();
     }
 
     @FindBy(xpath = "//p[.='Email is not valid!']")
-    public WebElement invalidEmail;
+     public WebElement invalidEmail;
 
 
 }
-
-
