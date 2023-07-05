@@ -36,7 +36,7 @@ public class StudymateLoginPage {
 
     public void studyMateLogIn(){
         usernameInput.sendKeys(Config.getValue("studymateUsername"));
-        passwordInput.sendKeys(PasswordEncryptorDecryptor.decryptPassword(Config.getValue("studymatePassword")));
+        passwordInput.sendKeys(Config.getValue("studymatePassword"));
         loginBtn.click();
     }
 
